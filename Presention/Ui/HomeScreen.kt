@@ -1,5 +1,6 @@
 package com.example.mynasa.Presention.Ui
 
+import android.graphics.ColorSpace
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -40,6 +41,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.colorspace.ColorSpaces
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -188,7 +190,7 @@ class HomeScreen :Screen {
                         // Space between buttons
                     ) {
                         Icon(
-                            modifier = Modifier.size(20.dp),
+                            modifier = Modifier.size(25.dp),
                             imageVector = Icons.Filled.Info,
                             contentDescription = "Info FAB",
                             tint = Color.White
@@ -239,6 +241,8 @@ class HomeScreen :Screen {
                         red = Random.nextFloat(),
                         green = Random.nextFloat(),
                         blue = Random.nextFloat(),
+                        colorSpace = ColorSpaces.Srgb,
+                        alpha = 1f
                     )
                     Card(
                         modifier = Modifier
