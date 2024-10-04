@@ -188,7 +188,7 @@ class HomeScreen :Screen {
                         // Space between buttons
                     ) {
                         Icon(
-                            modifier = Modifier.size(40.dp),
+                            modifier = Modifier.size(20.dp),
                             imageVector = Icons.Filled.Info,
                             contentDescription = "Info FAB",
                             tint = Color.White
