@@ -13,6 +13,7 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.ArrowBack
@@ -183,51 +184,45 @@ class HomeScreen :Screen {
                     FloatingActionButton(
                         onClick = { /* Handle FAB click */ },
                         containerColor = MaterialTheme.colorScheme.primary,
+                        shape = CircleShape
                         // Space between buttons
                     ) {
                         Icon(
                             modifier = Modifier.size(40.dp),
                             imageVector = Icons.Filled.Info,
                             contentDescription = "Info FAB",
-                            tint = Color.Black
+                            tint = Color.White
                         )
                     }
                     Spacer(modifier = Modifier.height(10.dp))
 
                     FloatingActionButton(
                         onClick = { navigator.push(QrCode()) },
-                        containerColor = MaterialTheme.colorScheme.primary
+                        containerColor = MaterialTheme.colorScheme.primary,
+                        shape = CircleShape
                     ) {
-                        Icon(
-                            modifier = Modifier.size(40.dp),
-                            imageVector = Icons.Filled.PlayArrow,
-                            contentDescription = "Play FAB",
-                            tint = Color.Black
-                        )
+                       Image(painter = painterResource(id = R.drawable.baseline_qr_code_24), contentDescription = null)
                     }
                     Spacer(modifier = Modifier.height(10.dp))
                     FloatingActionButton(
                         onClick = {  },
-                        containerColor = MaterialTheme.colorScheme.primary
+                        containerColor = MaterialTheme.colorScheme.primary,
+                        shape = CircleShape
                     ) {
                         Icon(
                             modifier = Modifier.size(40.dp),
                             imageVector = Icons.Filled.Add,
                             contentDescription = "Play FAB",
-                            tint = Color.Black
+                            tint = Color.White
                         )
                     }
                     Spacer(modifier = Modifier.height(10.dp))
                     FloatingActionButton(
                         onClick = {  },
-                        containerColor = MaterialTheme.colorScheme.primary
+                        containerColor = MaterialTheme.colorScheme.primary,
+                        shape = CircleShape
                     ) {
-                        Icon(
-                            modifier = Modifier.size(40.dp),
-                            imageVector = Icons.Filled.Share,
-                            contentDescription = "Play FAB",
-                            tint = Color.Black
-                        )
+                       Image(painter = painterResource(id =R.drawable.baseline_auto_awesome_24), contentDescription =null )
                     }
                 }
             }
